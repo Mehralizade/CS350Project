@@ -38,8 +38,8 @@ public class CalculatorTest {
         Double number2 = 5.00;
         Calculator calculator = new Calculator();
 
-        Assert.assertEquals(new Double(NaN),calculator.reset(number));
-        Assert.assertEquals(new Double(5.00),calculator.reset(number));
+        Assert.assertEquals(new Double(NaN),calculator.reset());
+        Assert.assertEquals(new Double(5.00),calculator.reset());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class CalculatorTest {
         Double number = 9.00;
         Assert.assertEquals(new Double(81.00),calculator.calculateMono(Calculator.MonoOperatorModes.square,number));
         Assert.assertEquals(new Double(9.00),calculator.calculateMono(Calculator.MonoOperatorModes.squareRoot,number));
-        Assert.assertEquals(new Double(cos(9.00)),calculator.calculateMono(Calculator.MonoOperatorModes.cos,number));
+        Assert.assertEquals(new Double((9.00)),calculator.calculateMono(Calculator.MonoOperatorModes.cos,number));
         Assert.assertEquals(new Double(100.00),calculator.calculateMono(Calculator.MonoOperatorModes.square,number));
     }
 }
