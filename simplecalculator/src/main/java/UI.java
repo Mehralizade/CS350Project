@@ -37,7 +37,7 @@ public class UI implements ActionListener {
    
    private final JTextArea text;
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
-      butEqual, butCancel, butSquareRoot, butSquare, butOneDevidedBy,
+      butEqual, butCancel, butSquareRoot, butSquare, butOneDividedBy,
       butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary;
    private final Calculator calc;
    
