@@ -37,7 +37,7 @@ public class UI implements ActionListener {
    
    private final JTextArea text;
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
-      butEqual, butCancel, butSquareRoot, butSquare, butOneDividedBy,
+      butEqual, butCancel, butSquareRoot, butSquare, butOneDevidedBy,
       butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary;
    private final Calculator calc;
    
@@ -80,7 +80,7 @@ public class UI implements ActionListener {
       butEqual = new JButton("=");      
       butSquareRoot = new JButton("sqrt");      
       butSquare = new JButton("x*x");      
-      butOneDividedBy = new JButton("1/x");
+      butOneDevidedBy = new JButton("1/x");
       butCos = new JButton("Cos");      
       butSin = new JButton("Sin");      
       butTan = new JButton("Tan");      
