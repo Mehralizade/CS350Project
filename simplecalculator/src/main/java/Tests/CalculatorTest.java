@@ -12,16 +12,17 @@ public class CalculatorTest {
         Double number2 = 9.00;
         Calculator calculator = new Calculator();
         Calculator.BiOperatorModes mode;
-        mode = Calculator.BiOperatorModes.add;
+        mode = Calculator.BiOperatorModes.ADD;
 
-        Assert.assertEquals(new Double(20.00),calculator.calculateBi(Calculator.BiOperatorModes.add,number));
-        Assert.assertEquals(new Double(18.00),calculator.calculateBi(Calculator.BiOperatorModes.add,number));
-        Assert.assertEquals(new Double(0.00),calculator.calculateBi(Calculator.BiOperatorModes.minus,number));
-        Assert.assertEquals(new Double(3.00),calculator.calculateBi(Calculator.BiOperatorModes.minus,number));
-        Assert.assertEquals(new Double(10.00),calculator.calculateBi(Calculator.BiOperatorModes.multiply,number));
-        Assert.assertEquals(new Double(81.00),calculator.calculateBi(Calculator.BiOperatorModes.multiply,number));
-        Assert.assertEquals(new Double(2.00),calculator.calculateBi(Calculator.BiOperatorModes.divide,number));
-        Assert.assertEquals(new Double(18.00),calculator.calculateBi(Calculator.BiOperatorModes.xpowerofy,number));
+        Assert.assertEquals(new Double(20.00),calculator.calculateBi(Calculator.BiOperatorModes.ADD,number));
+        Assert.assertEquals(new Double(18.00),calculator.calculateBi(Calculator.BiOperatorModes.ADD,number));
+        Assert.assertEquals(new Double(0.00),calculator.calculateBi(Calculator.BiOperatorModes.MINUS,number));
+        Assert.assertEquals(new Double(3.00),calculator.calculateBi(Calculator.BiOperatorModes.MINUS,number));
+        Assert.assertEquals(new Double(10.00),calculator.calculateBi(Calculator.BiOperatorModes.MULTIPLY,number));
+        Assert.assertEquals(new Double(81.00),calculator.calculateBi(Calculator.BiOperatorModes.MULTIPLY,number));
+        Assert.assertEquals(new Double(2.00),calculator.calculateBi(Calculator.BiOperatorModes.DIVIDE,number));
+        Assert.assertEquals(new Double(1.00),calculator.calculateBi(Calculator.BiOperatorModes.DIVIDE,number));
+        Assert.assertEquals(new Double(18.00),calculator.calculateBi(Calculator.BiOperatorModes.XPOWEROFY,number));
     }
 
     @Test
@@ -46,11 +47,18 @@ public class CalculatorTest {
     public void calculateMono() {
         Calculator calculator = new Calculator();
         Calculator.MonoOperatorModes mode;
-        mode = Calculator.MonoOperatorModes.square;
+        mode = Calculator.MonoOperatorModes.SQUARE;
         Double number = 9.00;
-        Assert.assertEquals(new Double(81.00),calculator.calculateMono(Calculator.MonoOperatorModes.square,number));
+        Double number2 = 45.00;
+
+        Assert.assertEquals(new Double(81.00),calculator.calculateMono(Calculator.MonoOperatorModes.SQUARE,number));
         Assert.assertEquals(new Double(9.00),calculator.calculateMono(Calculator.MonoOperatorModes.squareRoot,number));
-        Assert.assertEquals(new Double((9.00)),calculator.calculateMono(Calculator.MonoOperatorModes.cos,number));
-        Assert.assertEquals(new Double(100.00),calculator.calculateMono(Calculator.MonoOperatorModes.square,number));
+        Assert.assertEquals(new Double((9.00)),calculator.calculateMono(Calculator.MonoOperatorModes.COS,number));
+        Assert.assertEquals(new Double(2.00),calculator.calculateMono(Calculator.MonoOperatorModes.TAN,number2));
+        Assert.assertEquals(new Double(1.00),calculator.calculateMono(Calculator.MonoOperatorModes.TAN,number2));
+        Assert.assertEquals(new Double(-9),calculator.calculateMono(Calculator.MonoOperatorModes.ABS,number));
+        Assert.assertEquals(new Double(2.00),calculator.calculateMono(Calculator.MonoOperatorModes.LOG,number));
+        Assert.assertEquals(new Double(1.00),calculator.calculateMono(Calculator.MonoOperatorModes.RATE,number));
+        Assert.assertEquals(new Double(9.00),calculator.calculateMono(Calculator.MonoOperatorModes.oneDividedBy,number));
     }
 }
